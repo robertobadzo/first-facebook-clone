@@ -1,17 +1,13 @@
 import express from "express";
 import mongoose from "mongoose"
 import registerModel from "../models/registerModel.js";
+import emailCheck from "email-check";
 
-export const getAllUsers = async (req, res) => {
-    
-    const userr = await registerModel.find({})
-    res.send(userr)
-}
 export const saveUser = async (req, res)=> {
-    const { body: userData } = req;
-    let newUser = await registerModel.create(userData)
-    res.status(200).send(newUser)
+    const { body: data } = req;
+    let newUser = await registerModel.create(data)
+    res.status(200).send("You are registered")
     
-    
-}
 
+}
+    
