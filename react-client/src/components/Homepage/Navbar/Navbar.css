@@ -1,0 +1,70 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+}
+
+
+.wrapper {
+    position: fixed;
+    height: 56px;
+    width: 100%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 80px;
+    
+}
+
+.search {
+    color: rgb(101,103,107);
+    border-radius: 50%;
+    background: rgb(240,242,245);
+    padding: 10px;
+}
+
+.start-icons {
+    width: 250px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.middle-icons {
+    width: 200px;
+    align-items: center;
+
+    
+    
+}
+
+.end-icons {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width:250px;
+}
+.arrow-down {
+    padding: 10px;
+    border-radius: 50%;
+    background: rgb(240,242,245);
+    margin: 0 5px;
+}
+.messages {
+    padding: 10px;
+    border-radius: 50%;
+    background: rgb(240,242,245);
+    margin: 0 5px;
+}
+.notifications {
+    padding: 10px;
+    border-radius: 50%;
+    background: rgb(240,242,245);
+    margin: 0 5px;
+}
+.middle-icons > * {
+    margin: 0 10px;
+}
