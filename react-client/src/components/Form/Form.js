@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import "./Form.css"
 import axios from 'axios';
 import * as api from "../../api"
+import {NavLink} from "react-router-dom"
 
 function Form() {
 const [userData, setUserData] = useState({name: "", surname: "", email: "", password: ""})
@@ -27,6 +28,7 @@ const handleSubmit = async (e) => {
           <input name="email" type="email" placeholder='E-mail' pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required onChange={(e) => setUserData({...userData, email: e.target.value})}></input>
           <input name="password" type="password" placeholder='Password' minLength = "2" maxLength = "20" required onChange={(e) => setUserData({...userData, password: e.target.value})}></input>
           <button type='submit'>Sign Up</button>
+          <NavLink to = "/login"><h5>Already have an account? Log in!</h5></NavLink>
         </div>
       </form>
     </div>
